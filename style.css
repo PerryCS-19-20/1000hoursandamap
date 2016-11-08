@@ -1,11 +1,6 @@
 <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 <link rel="icon" href="favicon.png" type="image/x-icon">
 
-body {
-            background-image:url("BACKGROUND_IMAGE_DATBOI.png");
-            color:orange;
-}
-
 .link {
             font-size: 20px;
             text-align:center;
@@ -32,12 +27,17 @@ li a {
     }
 
 li a:hover:not(.active) {
-    background-color: white;
+    background-color: orange;
     color:black;
 }
 
 .active {
-       background-color: orange;
+       background-color: blue;
+}
+
+body {
+            background-image:url("BACKGROUND_IMAGE_DATBOI.png");
+            color:orange;
 }
 
 
