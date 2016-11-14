@@ -2,6 +2,11 @@
 <html>
     <head>
       <title>My Thoughts</title>
+      <script>
+        function changeColor() {
+            document.body.style.backgroundColor= "orange";
+        }
+      </script>    
     <style>
     </style>
     </head>
@@ -9,6 +14,7 @@
     <h1>My Thoughts</h1>
     <br>
     <br>
-    The span tag is <span style="color:blue;font-weight:bold"> pretty </span>  <span style="color:pink;font-weight: bold">awesome! </span> If you move your mouse here, it changes from black to red. 
+    The span tag is <span style="color:blue;font-weight:bold" > pretty </span>  <span style="color:pink;font-weight: bold">awesome! </span> 
+    If you move your mouse <span onmouseover="changeColor();"> here </span>, the background changes to orange. 
   </body>
 </html>
