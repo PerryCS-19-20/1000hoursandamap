@@ -7,11 +7,13 @@
     <h1>Modifying w/ Javascript</h1>
     <textarea  rows="10" cols="80" id="inputText">Input html to test here</textarea>
     <button onclick="testHTML();">Test!</button>
-    <span id="s1"> Hi! </span>
+    <span id="s1"></span>
     <script>
       function testHTML() {
+        var userInput = document.getElemenById(inputText);
         var theSpan = document.getElementById("s1");
-        theSpan.inerhtml = userInput.value
+        theSpan.innerHTML = userInput.value;
+        
       }
     </script>
 
