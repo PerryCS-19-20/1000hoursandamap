@@ -1,26 +1,30 @@
-<! DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title> To Do List </title>
   </head>
   <body>
 
-    <textarea  rows="10" cols="80" id="inputText">Input html to test here</textarea>
-        <button onclick="testHTML();">Push</button>
+    <textarea  rows="10" cols="80" id="unList">Type stuff you want to do.</textarea>
+        <button onclick="inputList();">Push</button>
         <hr>
         <br>
-        <ul>
-          
+    
+        <ul id="s1"> 
         </ul>
-        <span id="s1"></span>
   
     
     <script>
     
-      function testHTML() {
-        var userInput = document.getElementById("inputText");
+      function inputList() {
+        
+        var userInput = document.getElementById("unList")
         var theSpan = document.getElementById("s1");
-        theSpan.innerHTML = userInput.value;
+        
+        var bulletPoint = document.createElement("li");
+        bulletPoint.textContent = userInput.value;
+        
+        theSpan.appendChild(bulletPoint);
         
         }
         
