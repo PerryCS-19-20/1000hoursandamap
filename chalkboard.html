@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> To Do List </title>
+  </head>
+  <body>
+
+    <textarea  rows="10" cols="80" id="unList">Type stuff you want to do.</textarea>
+        <button onclick="inputList();">Push</button>
+        <hr>
+        <br>
+    
+        <ol id="s1">
+        </ol>
+  
+    
+    <script>
+    
+      function inputList() {
+        
+        var userInput = document.getElementById("unList")
+        var theSpan = document.getElementById("s1");
+        
+        for(var  i=0; i < 100; i++){   
+
+       var chalk = document.createElement("li");       
+       chalk.textContent="I will not " + userInput.value;
+
+       theSpan.appendChild(chalk);
+
+
+
+}
+
+        
+        }
+        
+      </script>
+  </body>
+</html>
