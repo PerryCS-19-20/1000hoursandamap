@@ -19,30 +19,65 @@ table, td {
           text-align: center;
       }
       
+      .board {
+          
+      }
+      
   </style>
   
   <!--END style-->
   
   <!--START script-->
   <script>
-      var player= "X";
+      
+      // Variables 
+      
+      var playerName = "X";
+      var a1 = document.getElementById('1');
+      var a2 = document.getElementById('2');
+      var a3 = document.getElementById('3');
+      var b1 = document.getElementById('4');
+      var b2 = document.getElementById('5');
+      var b3 = document.getElementById('6');
+      var c1 = document.getElementById('7');
+      var c2 = document.getElementById('8');
+      var c3 = document.getElementById('9');
+      var sc = new Text("Player " + playerName + "Won!", "24pt Arial"); 
+      
+      // checks if 3 cells have the same text content, and then notifies if
+      // someone has 3 in a row.
+      //does not work so far 
+      function check3Cells(q, w, e){
+          if (a1.textContent == a2.textContent && a2.Content === a3.textContent &&
+              a1.textContent != ""){
+              add(sc);
+              }
+      }
+      //Inserts the player name into the cell text content
+      
       function play(x){
+          //creates a variable, stores the id of the cell clicked on in var cell, 
+          // checks if txtCntnt is empty, inserts playerName if it is empty.
+          
           var cell = document.getElementById(x);
           if (cell.textContent == ""){
-              cell.textContent = player;
+              cell.textContent = playerName;
+              
+           //changes the playerName
            
            
-           if(player == "X"){
-               player = "O";
+           if(playerName == "X"){
+               playerName = "O";
            }else{
-               player = "X";
+               playerName = "X";
            }
            
-           
-          
-          
+
+      function checkWin(){
+          check3Cells("a1", "a2", "a3");
             }
-          }
+        }
+     }
           
       
   </script>
