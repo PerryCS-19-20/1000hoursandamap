@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Times Table</title>
+        <style>
+            table, td, th {
+                border: solid 1px;
+            }
+            td {
+                text-align: right;
+            }
+            .
+        </style>
+    </head>
+    <body onload="buildTimesTable()">
+        <script>
+            
+            function buildTimesTable() {
+                // Create a table for the multiplication table       
+                var timesTable = document.createElement("table");
+                timesTable.id = "timesTable";
+                
+                // Add the table to the document's body
+                var body = document.body;
+                body.appendChild(timesTable);
+                
+                // Fill in the multiplication table
+                for(var i = 0; i < 11; i++){
+                   var row = document.createElement("tr");
+                   timesTable.appendChild(row);
+                   for(var x = 0; x < 11; x++){
+                       
+                       if(i == 0){
+                           var cell = document.createElement("th");
+                           cell.textContent = x;
+                           
+                       }else{
+                           var cell = document.createElement("td");
+                           cell.textContent = i * x;
+                           if(x == 0){
+                               var cell = document.createElement("th");
+                               cell.textContent = i;
+                           }else{
+                           var cell = document.createElement("td");
+                           cell.textContent = i * x;
+                           }
+                       }
+                      row.appendChild(cell);
+                      if(i % 3 == 0){
+                          var color = document.getElementById="color"
+                      }
+                   }
+                       
+                }
+                
+            }
+        </script>
+        
+        <h1>Multiplication Table</h1>
+       
+    </body>
+</html>
 
