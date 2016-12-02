@@ -3,15 +3,39 @@
   <head>
     <title>Calculator for Volume of a Pyramid </title>
     <style>
-      
+        input[type=number] {
+            width: 128px;
+        }
+        
+        body {
+            background-color: black;
+        }
+        
+        .cyan {
+            color: cyan;
+        }
     </style>
     <script>
-    
+        function calc(){
+            var l = parseFloat(document.getElementById("length").value);
+            var w = parseFloat(document.getElementById("width").value);
+            var h = parseFloat(document.getElementById("height").value);
+            var area = l * w;
+            vol.value = (area * h * (1/3) + " meters");
+        }
     </script>
   </head>
   <body>
-  <h1> Pyramid Volume: </h1>
+  <h1 class="cyan"> Pyramid Volume: </h1>
+  <img src="CalculatorIMG.jpg" style="float:left; height: 200px; margin-right: 5px;">
+  <h2 class="cyan"> V = l w h (1/3) </h2> 
   
-  
+  <h4 class="cyan">length: <input type="number" id="length" placeholder="length in meters"></h4>
+  <h4 class="cyan">width: <input type="number" id="width" placeholder="width in meters"></h4>
+  <h4 class="cyan"> height: <input type="number" id="height" placeholder="height in meters" width="128px"></h4>
+  <hr> 
+  <button onclick="calc();">Calculate</button>
+  <hr>
+  <h3 class="cyan">v: <input type="output" id="vol" placeholder="Calculated VOlUME YAYYY" readonly></h3> 
   </body>
 </html>
