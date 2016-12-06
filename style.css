@@ -31,10 +31,10 @@ li a, .dropbtn {
  
 //What occurs when the mouse hovers over a section in the navbar
 li a:hover, .dropdown:hover .dropbtn {
-    background-color: orange;
 }
 
 li.dropdown {
+            position:relative;
     display: inline-block;
 }
 
@@ -55,12 +55,16 @@ li.dropdown {
     text-align: left;
 }
 
-.dropdown-content a:hover {background-color:black;
-       color:orange;
+.dropdown-content a:hover {background-color:gray;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
+    text-align: center;
+}
+
+.dropdown:hover .dropbtn {
+ background-color: gray;           
 }
  //glowing box
 .bordershadow {
