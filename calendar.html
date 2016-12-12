@@ -6,7 +6,15 @@
         <title>Calendar</title>
         <script>
             function makeCalendar() {
+                var calendar = document.createElement("table");
+                calendar.id = "calendar"
+                var body = document.body
+                body.appendChild(calendar);
                 
+                for(var i = 0; i < 7; i++){
+                    var row = document.createElement("tr");
+                    calendar.appendChild(row);
+                }
             }
         </script>
     </head>
