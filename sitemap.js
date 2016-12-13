@@ -35,6 +35,16 @@ function buildMap(siteMapWrapper){
  
 }
 
-function addListItem(itemName, itemId, itemLink, parentId)[
-
-]
+function addListItem(itemName, itemId, itemLink, parentId){
+    var item = document.createElement("li");
+    var parent = document.getElementById("ParentId");
+    item.id = itemId
+    parentId.appendChild(item);
+    
+    var link = document.createElement("a");
+    link.textContent = itemId;
+    if(itemLink != null){
+        link.href = itemLink;
+    }
+    item.appendChild(link);
+}
