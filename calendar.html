@@ -9,12 +9,31 @@
 }
         </style>
         <script>
+            //creates table, gives id, create body, add table to body
             function makeCalendar() {
                 var calendar = document.createElement("table");
                 calendar.id = "calendar"
                 var body = document.body
                 body.appendChild(calendar);
-             
+                
+        // creates row, adds row to table
+        for(var i = 0; i < 31; i++){
+            var row= document.createElement("tr");
+            calendar.appendChild(row);
+            if(i % 7 == 0){
+                new row;
+                row.textContent = "anyone";
+                calendar.appendChild(row);
+                
+            }
+        }
+            var row = document.createElement("tr");
+            calendar.appendChild(row);
+            
+          /* PROJECT: TRY IT OUT 
+          // 
+          */    
+           //gets the name of the day in each row
             }
             function getDayName(dayNum) {
                 switch(month){
@@ -35,10 +54,15 @@
                 }
             }
             
-            var row = document.createElement("tr");
-            calendar.appendChild(row);
+            function getFirstDay(moth, year){
+                var date = new Date(year, month, 1);
+                return date.getDay();
+                
+            }
+           
       
-            
+          //creates a table header, 7 of them, txtContent = day of row/wk,
+          // adds the header to a row
             for(var x = 0; i < 7; i ++){
                 var header = document.createElement("th");
                 
@@ -47,15 +71,20 @@
                 row.appendChild(header);
             }
             
-            for(var i = 1; i <31; i++ ){
-                getDayName(dayNum)
+            for(var i = 1; i <31 + getFirstDay(month, year); i++ ){
+                
+                var day =   i+1 - getFirstDay(month, year);
+                if (day > 0){
+                    cell.textContent = day;
+                    }else{
+                        cell.style.border = 0; 
+                    }
+                var today = new Date();
+                var month = today.getMonth();
+                var year = today.getFullYear();
             }
             
-            function getFirstDayMonth (month, year ){
-                var date = new Date(year, month, 1);
-                return date.getDay();
-                
-            }
+            
             
             
         </script>
@@ -66,3 +95,5 @@
         
     </body>
 </html>
+
+
