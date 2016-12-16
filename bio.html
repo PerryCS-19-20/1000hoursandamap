@@ -1,8 +1,10 @@
 <html>
   <head>
     <title>My Website</title>
-    
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src = "sitemap.js">
+    </script>
+    <link rel="stylesheet "type="text/css" href="menubar.css">
+   
     
    <style>
     .middle{
@@ -10,7 +12,8 @@
     }
    </style>
   </head>
-  <body>
+  <body onload="buildMap ('menubar');">
+    <div id="menubar"></div>
     <h1 class="middle">Dat Bio(boi)</h1>
     <h2>About the Site's Creator, Oscar V.</h2>
     <ul>
