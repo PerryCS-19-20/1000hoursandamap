@@ -22,8 +22,19 @@
           }
     </style>
     <script>
+      document.getElementById("change").onmouseover = function() {
+        changeBackground()
+      };
+      
+      document.getElementById("change").onmouseout = function() {
+         revert()
+      };
         function changeBackground(){
           document.body.background = "zenyatta.jpg";
+        }
+      
+        function revert() {
+         document.body.background.color = white; 
         }
     </script>
     </head>
@@ -53,7 +64,7 @@
     <br>
     <div class="bordershadow"> Hover over me because I <span style="color:orange"> glow!!! </span></div>
     <h1>What we think. We become.
-      <p><span onmouseover="changeBackground();">-Buddha</span></p>
+      <p id="change">-Buddha</p>
     </h1>
     <hr>
     <h2>What makes software, software?</h2>
